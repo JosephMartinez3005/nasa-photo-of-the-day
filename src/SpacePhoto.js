@@ -1,18 +1,18 @@
 import React, {useEffect} from 'react'
-import axios from 'axios'
-function SpacePhoto(){
 
+
+function SpacePhoto(props){
+    const {data} = props;
     return(
         <>
-            {
-                useEffect(()=>{
-                    axios.get('')
-                    .then()
-                    .catch()
-                },[])
-            }
+            <div>
+            <h6>{data.title}</h6>
+            <h6>{data.date}</h6>
+            <p>{data.explanation}</p>
+            {/* <url src={data.url}> */}
+            </div>
         </>
     )
 }
 
-export default SpacePhoto
+export default SpacePhoto;
